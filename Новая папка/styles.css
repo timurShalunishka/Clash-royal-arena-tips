@@ -1,0 +1,32 @@
+body {
+  background-color: #0a1a2a; /* Deep dark blue */
+  color: #eee; /* Light text for contrast */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+.tips {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.tips.show {
+  max-height: 600px;
+  opacity: 1;
+}
+.arena h2 {
+  background: linear-gradient(
+    90deg,
+    #FFD700,  /* Gold */
+    #FFA500,  /* Orange-gold */
+    #FFD700   /* Shine */
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Firefox */
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  font-size: 1.6em;
+}

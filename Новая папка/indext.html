@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clash Royale Arenas Tips</title>
+  <style>
+    body {
+      background: #0b1446; /* deep dark blue */
+      color: #e0e0e0;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding-bottom: 100px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #fff;
+      text-shadow: 0 0 8px #77aaffaa;
+    }
+
+    .arena {
+      background: #12225a;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      padding: 15px 20px;
+      box-shadow: 0 0 10px #000a30cc;
+    }
+
+    /* Gradient text: natural text color - 20% darker */
+    .arena h2 {
+      background: linear-gradient(
+        to right,
+        #c1c1c1,
+        #999999
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+      margin: 0 0 10px 0;
+      font-size: 1.6em;
+    }
+
+    button.show-btn {
+      background: #3355aa;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 3px 5px #223366bb;
+      transition: background 0.3s ease;
+      margin-bottom: 10px;
+    }
+
+    button.show-btn:hover {
+      background: #4b6fcc;
+    }
+
+    .tips {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+    }
+
+    .tips.show {
+      max-height: 600px; /* enough height for content */
+      opacity: 1;
+    }
+
+    .tips h4 {
+      margin: 10px 0 6px 0;
+      color: #a0c0ff;
+    }
+
+    .tips ul {
+      margin: 0 0 10px 20px;
+      padding: 0;
+      list-style-type: disc;
+      color: #d0d8ff;
+    }
+
+    /* Scroll smooth */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <h1>Clash Royale Arenas Tips & Decks</h1>
+
+  <!-- Arena 1 -->
+  <div class="arena" id="arena1">
+    <h2>Arena 1: Goblin Stadium</h2>
+    <button class="show-btn" onclick="toggleTips('tips1')">Show Tips</button>
+    <div class="tips" id="tips1">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use cheap swarm units like Skeletons and Goblins to stop pushes.</li>
+        <li>Place buildings to distract Hog Rider and Giant.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Use Knight and Archers to create strong pushes.</li>
+        <li>Support with spells like Fireball and Zap.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Use surviving troops from defense to build counter pushes quickly.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 2 -->
+  <div class="arena" id="arena2">
+    <h2>Arena 2: Bone Pit</h2>
+    <button class="show-btn" onclick="toggleTips('tips2')">Show Tips</button>
+    <div class="tips" id="tips2">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use Valkyrie to counter ground swarms.</li>
+        <li>Use Minions to counter air troops.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Use Giant as a tank and support with ranged troops.</li>
+        <li>Use spells like Arrows to clear small troops.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Quickly counter with surviving troops after defense.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 3 -->
+  <div class="arena" id="arena3">
+    <h2>Arena 3: Barbarian Bowl</h2>
+    <button class="show-btn" onclick="toggleTips('tips3')">Show Tips</button>
+    <div class="tips" id="tips3">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use Barbarians and Musketeer for solid defense.</li>
+        <li>Place Cannon to distract tanks.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Use Hog Rider for quick tower damage.</li>
+        <li>Support with Fireball and Ice Spirit.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Counter quickly with surviving troops and spells.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 4 -->
+  <div class="arena" id="arena4">
+    <h2>Arena 4: P.E.K.K.A’s Playhouse</h2>
+    <button class="show-btn" onclick="toggleTips('tips4')">Show Tips</button>
+    <div class="tips" id="tips4">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use Mini P.E.K.K.A and Musketeer to counter big pushes.</li>
+        <li>Use Tornado to group enemy troops.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>P.E.K.K.A + Electro Wizard combo works well here.</li>
+        <li>Use spells wisely to protect P.E.K.K.A.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Counterpush with surviving P.E.K.K.A and support troops.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 5 -->
+  <div class="arena" id="arena5">
+    <h2>Arena 5: Spell Valley</h2>
+    <button class="show-btn" onclick="toggleTips('tips5')">Show Tips</button>
+    <div class="tips" id="tips5">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use spells like Zap, Fireball, and Arrows to counter swarms.</li>
+        <li>Use ranged troops like Musketeer and Wizard.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Spell combos with tank troops can be effective.</li>
+        <li>Use Freeze spell to support pushes.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Use spells to clear defense and push quickly after defense.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 6 -->
+  <div class="arena" id="arena6">
+    <h2>Arena 6: Builder’s Workshop</h2>
+    <button class="show-btn" onclick="toggleTips('tips6')">Show Tips</button>
+    <div class="tips" id="tips6">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use Cannon and Tesla for buildings defense.</li>
+        <li>Use Barbarians and Minions to counter pushes.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Battle Ram + Elite Barbarians is a strong combo.</li>
+        <li>Support with spells and ranged troops.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Use surviving troops from defense to counterattack fast.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 7 -->
+  <div class="arena" id="arena7">
+    <h2>Arena 7: Royal Arena</h2>
+    <button class="show-btn" onclick="toggleTips('tips7')">Show Tips</button>
+    <div class="tips" id="tips7">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use Mini P.E.K.K.A and Guards to counter heavy pushes.</li>
+        <li>Use Inferno Tower to melt tanks.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Royal Giant supported by Furnace and Musketeer.</li>
+        <li>Use spells to protect your pushes.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Counterpush with surviving troops after defense.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 8 -->
+  <div class="arena" id="arena8">
+    <h2>Arena 8: Frozen Peak</h2>
+    <button class="show-btn" onclick="toggleTips('tips8')">Show Tips</button>
+    <div class="tips" id="tips8">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use Ice Wizard and Ice Golem to slow down pushes.</li>
+        <li>Use Tornado spell to group troops.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Use Hog Rider with Ice Spirit and Freeze spell.</li>
+        <li>Use Giant + Witch combo pushes.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Counterattack quickly after a successful defense.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 9 -->
+  <div class="arena" id="arena9">
+    <h2>Arena 9: Jungle Arena</h2>
+    <button class="show-btn" onclick="toggleTips('tips9')">Show Tips</button>
+    <div class="tips" id="tips9">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use Goblin Hut to generate pressure and distract enemies.</li>
+        <li>Use Minions and Goblins for fast defense.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Giant + Night Witch pushes are strong in this arena.</li>
+        <li>Use Zap and Fireball to clear swarms.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Use surviving units from defense to support counter pushes.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 10 -->
+  <div class="arena" id="arena10">
+    <h2>Arena 10: Hog Mountain</h2>
+    <button class="show-btn" onclick="toggleTips('tips10')">Show Tips</button>
+    <div class="tips" id="tips10">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use Inferno Tower to melt tanks.</li>
+        <li>Skeleton Army to counter single high-damage troops.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Hog Rider with Ice Spirit or Freeze spell is a classic combo.</li>
+        <li>Use Goblin Gang to distract and overwhelm defenders.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Counterpush with surviving troops after a good defense.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 11 -->
+  <div class="arena" id="arena11">
+    <h2>Arena 11: Electro Valley</h2>
+    <button class="show-btn" onclick="toggleTips('tips11')">Show Tips</button>
+    <div class="tips" id="tips11">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use Electro Wizard to stun and control pushes.</li>
+        <li>Use Tesla for building defense.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Use Lightning to take out defensive buildings and grouped troops.</li>
+        <li>Use Miner + Poison for chip damage.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Surviving Electro Wizard can lead strong counter-pushes.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 12 -->
+  <div class="arena" id="arena12">
+    <h2>Arena 12: Spooky Town</h2>
+    <button class="show-btn" onclick="toggleTips('tips12')">Show Tips</button>
+    <div class="tips" id="tips12">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use Witch and Skeleton Army to control ground pushes.</li>
+        <li>Use Tornado with spells for crowd control.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Use Balloon with Freeze for devastating damage.</li>
+        <li>Use Miner for chip damage on towers.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Build fast counter pushes after successful defense.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 13 -->
+  <div class="arena" id="arena13">
+    <h2>Arena 13: Legendary Arena</h2>
+    <button class="show-btn" onclick="toggleTips('tips13')">Show Tips</button>
+    <div class="tips" id="tips13">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use well-timed spells to counter popular meta decks.</li>
+        <li>Use Musketeer and Ice Wizard to control the field.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Mix air and ground units for balanced pushes.</li>
+        <li>Use spells like Fireball and Zap for value.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Capitalize on elixir advantage with strong counter pushes.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 14 -->
+  <div class="arena" id="arena14">
+    <h2>Arena 14: Royal Ghost Arena</h2>
+    <button class="show-btn" onclick="toggleTips('tips14')">Show Tips</button>
+    <div class="tips" id="tips14">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use air and ground units to cover Royal Ghost’s invisibility.</li>
+        <li>Use splash damage troops like Wizard or Executioner.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Use Royal Ghost for stealthy attacks.</li>
+        <li>Support with spells and ranged troops.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Quick counterattacks after defense are crucial.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 15 -->
+  <div class="arena" id="arena15">
+    <h2>Arena 15: Mega Knight Arena</h2>
+    <button class="show-btn" onclick="toggleTips('tips15')">Show Tips</button>
+    <div class="tips" id="tips15">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use swarm troops and spells to stop Mega Knight’s jumps.</li>
+        <li>Use Inferno Tower for tank defense.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Use Mega Knight with support troops like Electro Wizard.</li>
+        <li>Use spells to protect your pushes.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Use surviving troops to build counter pushes.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 16 -->
+  <div class="arena" id="arena16">
+    <h2>Arena 16: Electro Valley</h2>
+    <button class="show-btn" onclick="toggleTips('tips16')">Show Tips</button>
+    <div class="tips" id="tips16">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use Electro Wizard and Tesla for good defense.</li>
+        <li>Use spells to control enemy pushes.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Use Lightning spell to clear defenses.</li>
+        <li>Support with Miner for chip damage.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Counterattack with surviving troops after defense.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 17 -->
+  <div class="arena" id="arena17">
+    <h2>Arena 17: Royal Arena</h2>
+    <button class="show-btn" onclick="toggleTips('tips17')">Show Tips</button>
+    <div class="tips" id="tips17">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use Mini P.E.K.K.A and Guards for solid defense.</li>
+        <li>Use Inferno Tower to melt tanks.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Royal Giant supported by Furnace and Musketeer.</li>
+        <li>Use spells to protect your pushes.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Counterpush with surviving troops after defense.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 18 -->
+  <div class="arena" id="arena18">
+    <h2>Arena 18: Frozen Peak</h2>
+    <button class="show-btn" onclick="toggleTips('tips18')">Show Tips</button>
+    <div class="tips" id="tips18">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use Ice Wizard and Ice Golem to slow down pushes.</li>
+        <li>Use Tornado spell to group troops.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Use Hog Rider with Ice Spirit and Freeze spell.</li>
+        <li>Use Giant + Witch combo pushes.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Counterattack quickly after a successful defense.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 19 -->
+  <div class="arena" id="arena19">
+    <h2>Arena 19: Jungle Arena</h2>
+    <button class="show-btn" onclick="toggleTips('tips19')">Show Tips</button>
+    <div class="tips" id="tips19">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use Goblin Hut to generate pressure and distract enemies.</li>
+        <li>Use Minions and Goblins for fast defense.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Giant + Night Witch pushes are strong in this arena.</li>
+        <li>Use Zap and Fireball to clear swarms.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Use surviving units from defense to support counter pushes.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 20 -->
+  <div class="arena" id="arena20">
+    <h2>Arena 20: Hog Mountain</h2>
+    <button class="show-btn" onclick="toggleTips('tips20')">Show Tips</button>
+    <div class="tips" id="tips20">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Ice Wizard and Tornado combo is great for defense.</li>
+        <li>Use Ice Golem to kite and slow enemies.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Hog Rider + Ice Spirit is a fast and effective combo.</li>
+        <li>Freeze spell works well with big pushes.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Use surviving troops to launch strong counter attacks.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 21 -->
+  <div class="arena" id="arena21">
+    <h2>Arena 21: Legend League</h2>
+    <button class="show-btn" onclick="toggleTips('tips21')">Show Tips</button>
+    <div class="tips" id="tips21">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Adapt your defense according to opponent’s deck.</li>
+        <li>Use a combination of spells and troops to control the battlefield.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Mix fast cycles with heavy tanks.</li>
+        <li>Use spells wisely to get value trades.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Take advantage of elixir lead to mount counter pushes.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 22 -->
+  <div class="arena" id="arena22">
+    <h2>Arena 22: Master League</h2>
+    <button class="show-btn" onclick="toggleTips('tips22')">Show Tips</button>
+    <div class="tips" id="tips22">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use well-timed spells to neutralize enemy pushes.</li>
+        <li>Place defensive buildings to distract key enemy troops.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Use prediction spells to counter enemy counters.</li>
+        <li>Use balanced decks with both air and ground threats.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+      <ul>
+        <li>Keep pressure on your opponent with continuous counter pushes.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Arena 23 -->
+  <div class="arena" id="arena23">
+    <h2>Arena 23: Challenger League</h2>
+    <button class="show-btn" onclick="toggleTips('tips23')">Show Tips</button>
+    <div class="tips" id="tips23">
+      <h4>🛡️ Defense Tips:</h4>
+      <ul>
+        <li>Use versatile troops to adapt to many playstyles.</li>
+        <li>Maintain good elixir management for defense.</li>
+      </ul>
+      <h4>⚔️ Attack Tips:</h4>
+      <ul>
+        <li>Cycle quickly and pressure with spells and fast troops.</li>
+        <li>Use combos that create synergy and confuse opponents.</li>
+      </ul>
+      <h4>🔁 Counterattack Tips:</h4>
+  <ul>
+  </ul>
+    </div>
+  </div>
+
+<script>
+  function toggleTips(id) {
+    const tips = document.getElementById(id);
+    tips.classList.toggle("show");
+  }
+</script>
+
+
+
+</body>
+</html>
