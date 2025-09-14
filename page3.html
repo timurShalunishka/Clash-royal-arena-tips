@@ -35,9 +35,20 @@
       gap:12px;
     }
     .logo{
-      width:56px;
-      height:56px;
       object-fit:contain;
+      text-decoration: none;                  
+      cursor: pointer;
+      width:52px;
+      height:52px;
+      border-radius:10px;
+      background:linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:1px solid rgba(255,255,255,0.04);
+      font-weight:700;
+      font-size:20px;
+      color:var(--accent);
     }
     .site-title{
       font-size:32px;
@@ -74,21 +85,6 @@
       box-shadow:0 6px 18px rgba(3,12,30,0.6), inset 0 -4px 8px rgba(0,0,0,0.25);
       transition:transform .18s ease, box-shadow .18s ease;
     }
-
-    .logo{
-    width:52px;
-    height:52px;
-    border-radius:10px;
-    background:linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border:1px solid rgba(255,255,255,0.04);
-    font-weight:700;
-    font-size:20px;
-    color:var(--accent);
-    text-decoration: none;
-    }
     .menu-btn:hover{transform:translateY(-4px);}
     .menu-btn:active{transform:translateY(-1px);}
     .menu-btn:focus{outline:3px solid rgba(10,120,220,0.18);}
@@ -104,16 +100,18 @@
   <header class="site-header">
     <div class="header-inner">
       <!-- сюда добавь свой файл логотипа CR -->
-      <a href="page3.html" class="logo">CR</a>
+      <div class="brand">
+      <a class="logo">CR<a>
+      <div>
       <h1 class="site-title">Clash Royale</h1>
     </div>
   </header>
 
   <main class="hero">
     <nav class="menu" aria-label="Главное меню">
-      <button class="menu-btn" data-target="index.html">Создание колод</button>
-      <button class="menu-btn" data-target="page1.html">Популярние колоди</button>
-      <button class="menu-btn" data-target="page2.html">Совети по аренах</button>
+      <button class="menu-btn" data-target="index.html">Создатель колод</button>
+      <button class="menu-btn" data-target="page1.html">Колоди</button>
+      <button class="menu-btn" data-target="page2.html">Информация про карт</button>
     </nav>
   </main>
 
