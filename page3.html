@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clash Royale — Меню</title>
+  <style>
+    :root{
+      --header-bg: #041733;
+      --main-bg: #020d1a;
+      --btn-bg: linear-gradient(180deg,#083b72 0%, #062d59 100%);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family: Inter, Roboto, Arial, sans-serif;
+      color:#fff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* Шапка */
+    .site-header{
+      background:var(--header-bg);
+      padding:28px 16px;
+    }
+    .header-inner{
+      max-width:1100px;
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:center; /* центрируем */
+      gap:12px;
+    }
+    .logo{
+      width:56px;
+      height:56px;
+      object-fit:contain;
+    }
+    .site-title{
+      font-size:32px;
+      margin:0;
+      letter-spacing:1px;
+    }
+
+    /* Основной экран */
+    .hero{
+      background:var(--main-bg);
+      min-height:calc(100vh - 112px);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px 16px;
+    }
+
+    .menu{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+      width:320px;
+    }
+
+    .menu-btn{
+      appearance:none;
+      border:0;
+      padding:16px 18px;
+      font-size:18px;
+      border-radius:12px;
+      cursor:pointer;
+      background:var(--btn-bg);
+      color:#fff;
+      box-shadow:0 6px 18px rgba(3,12,30,0.6), inset 0 -4px 8px rgba(0,0,0,0.25);
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+
+    .logo{
+    width:52px;
+    height:52px;
+    border-radius:10px;
+    background:linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid rgba(255,255,255,0.04);
+    font-weight:700;
+    font-size:20px;
+    color:var(--accent);
+    text-decoration: none;
+    }
+    .menu-btn:hover{transform:translateY(-4px);}
+    .menu-btn:active{transform:translateY(-1px);}
+    .menu-btn:focus{outline:3px solid rgba(10,120,220,0.18);}
+
+    @media (max-width:420px){
+      .menu{width:88%;}
+      .site-title{font-size:22px}
+      .logo{width:42px;height:42px;}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- сюда добавь свой файл логотипа CR -->
+      <a href="page3.html" class="logo">CR</a>
+      <h1 class="site-title">Clash Royale</h1>
+    </div>
+  </header>
+
+  <main class="hero">
+    <nav class="menu" aria-label="Главное меню">
+      <button class="menu-btn" data-target="index.html">Создание колод</button>
+      <button class="menu-btn" data-target="page1.html">Популярние колоди</button>
+      <button class="menu-btn" data-target="page2.html">Совети по аренах</button>
+    </nav>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const buttons = document.querySelectorAll('.menu-btn');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', ()=>{
+          const target = btn.dataset.target;
+          window.location.href = target;
+        });
+      });
+    });
+  </script>
+</body>
+</html>
