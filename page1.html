@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clash Royale — Популярные колоды</title>
+<style>
+:root {
+  --sidebar-bg: #041733;
+  --header-bg: #041733;
+  --main-bg: #020d1a;
+  --card-bg: #083b72;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, sans-serif;
+  background: var(--main-bg);
+  color: #fff;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Боковая панель с центровкой кнопок */
+.sidebar {
+  width: 80px;
+  background: var(--sidebar-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* центр по вертикали */
+  gap: 20px;
+}
+.sidebar button {
+  background: var(--card-bg);
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  width: 60px;
+  transition: background 0.3s;
+}
+.sidebar button:hover {
+  background: #0a4a90;
+}
+
+/* Контент */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Шапка */
+header {
+  background: var(--header-bg);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header img.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Секция колод в ряд */
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Одна колода в ряду */
+.deck-row {
+  display: flex;
+  gap: 20px;
+  background: var(--card-bg);
+  padding: 16px;
+  border-radius: 12px;
+  align-items: center;
+}
+
+.deck-img {
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.deck-info {
+  flex: 1;
+}
+
+.deck-info h2 {
+  margin-bottom: 8px;
+}
+
+.deck-info p {
+  margin-bottom: 12px;
+}
+
+.deck-info button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #0a4a90;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.deck-info button:hover {
+  background: #062f6a;
+}
+
+.logo {
+  text-decoration: none;                  
+  cursor: pointer;
+  width:52px;
+  height:52px;
+  border-radius:10px;
+  background:linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(255,255,255,0.04);
+  font-weight:700;
+  font-size:20px;
+  color:var(--accent);    
+}
+/* Адаптив */
+@media (max-width:768px){
+  .deck-row{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .deck-img{
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+<!-- Боковая панель -->
+<aside class="sidebar">
+  <button onclick="window.location.href='index.html'">Создатель колод</button>
+  <button onclick="window.location.href='page2.html'">Информация про карт</button>
+</aside>
+
+<!-- Контент -->
+<div class="content">
+  <!-- Шапка -->
+  <header>
+    <a href="page3.html" class="logo">CR<a>
+    <h1>Clash Royale</h1>
+  </header>
+
+  <!-- Колоды -->
+  <main>
+    <div class="deck-row">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMYJ0zCah0jD_2fn50bwbd7qLgsmpIccalCQ&s" alt="Колода 1" class="deck-img">
+      <div class="deck-info">
+        <h2>Колода 1</h2>
+        <p>Атака
+Средне
+Защита
+Божественно!
+Синергия
+Отлично!
+Универсальность
+Божественно!
+Счет F2P
+Хорошо</p>
+        <button onclick="window.location.href='page1.html'">Подробнее</button>
+      </div>
+    </div>
+
+    <div class="deck-row">
+      <img src="https://i0.wp.com/gamingonphone.com/wp-content/uploads/2025/03/Mega-Knight-Firecracker-Goblin-Barrel-Cannon-Arrows-Zap-Inferno-Dragon-Goblin-Gang.jpg" alt="Колода 2" class="deck-img">
+      <div class="deck-info">
+        <h2>Колода 2</h2>
+        <p>Дуже популярна колода</p>
+        <button onclick="window.location.href='page2.html'">Подробнее</button>
+      </div>
+    </div>
+
+    <div class="deck-row">
+      <img src="https://files.vgtimes.ru/posts/2017-05/thumbs/1494499278_koloda-s-vsadnikom-i-goblinom-s-drotikami.webp" alt="Колода 3" class="deck-img">
+      <div class="deck-info">
+        <h2>Колода 3</h2>
+        <p>Колода для тех у кого 2 отца</p>
+        <button onclick="window.location.href='page3.html'">Подробнее</button>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
