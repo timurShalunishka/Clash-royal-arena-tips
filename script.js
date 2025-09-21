@@ -106,3 +106,13 @@ searchInput.addEventListener('input',ev=>{
 buildSlots();
 buildPool();
 updateDeckCount();
+
+window.addEventListener('load', () => {
+  const buttons = document.querySelectorAll('.btn');
+  buttons.forEach((btn, i) => {
+    // Добавляем с небольшим задержкой для каждого кнопки — эффект "спуска"
+    setTimeout(() => {
+      btn.classList.add('animate-slide-down');
+    }, i * 150);
+  });
+});
