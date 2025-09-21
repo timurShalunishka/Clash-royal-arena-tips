@@ -1,4 +1,4 @@
-  :root{
+ :root{
     --bg1:#07122a;
     --bg2:#041733;
     --card-bg:rgba(255,255,255,0.06);
@@ -272,3 +272,38 @@
   font-size:20px;
   color:var(--accent);    
 }
+
+@keyframes slideDownFadeIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slot, .pool .card {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: slideDownFadeIn;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn.animate-slide-down {
+  animation: slideDown 0.5s ease forwards;
+}
+
